@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --text-color: white;
+    --bg-url: url(./assets/Background.png);
+    --stroke-color: rgba(255, 255, 255, 0.2);
+    --surface-color: rgba(255, 255, 255, 0.1);
+    --surface-color-hover: rgba(255, 255, 255, 0.2); 
+    --box-color: rgba(255, 255, 255, 0.3);   
+    --box-background: rgba(0, 0, 0, 0.2);
+    --links-hover-color: rgba(255, 255, 255, 0.2);
+    --switch-mode: url(./switch-icon.svg);
+    --surface-span-color: rgba(255, 255, 255, 0.1);
+    --stroke-span-color: rgba(255, 255, 255, 0.5);
+
+}
+
+.light {
+    --text-color: black;
+    --bg-url: url(./assets/Backgroundlight.jpg);
+    --surface-color: rgba(0, 0, 0, 0.2);
+    --surface-color-hover: rgba(0, 0, 0, 0.5);
+    --stroke-color: rgba(0, 0, 0, 0.05);
+    --box-color: rgba(0, 0, 0, 0.05);
+    --box-background: rgba(0, 0, 0, 0.3);
+    --links-hover-color: rgba(0, 0, 0, 0.1);
+    --switch-mode: url(./sun.svg);
+    --surface-span-color: rgba(0, 0, 0, 0.1);
+    --stroke-span-color: rgba(0, 0, 0, 0.1);
+
+}
+
+body {
+   /*background-image: url(./assets/Coat_of_arms_of_the_Soviet_Union_\(1923–1936\).svg.png);
+   background-repeat: no-repeat; 
+   background-position: top center;*/
+
+
+   /* background-size: cover; faz a imagem cobrir a tela inteira */
+   background: var(--bg-url) no-repeat top center/cover;
+}
+
+body * {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-color);
+    font-size: 16;
+}
+
+#user {
+    padding: 40px;
+    font-size: 48px;
+    text-align: center;
+    margin: auto;
+
+}
+
+#switch button {
+    width: 32px;
+    height: 32px;
+    background: white var(--switch-mode) no-repeat center;
+    border: 0;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+    transform: translateY(-50%);
+    top: 50%;
+    left: 0;
+
+}
+
+#switch {
+    position: relative;
+    width: 64px;
+    margin: 4px auto;
+}
+#switch span {
+    width: 64px;
+    height: 24px;
+    background: var(--surface-span-color);
+    border: 1px solid var(--stroke-span-color);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    display: block;
+    border-radius: 9999px;
+    
+}
+
+.light #switch button {
+    right: 0;
+    left: initial;
+}
+
+
+#box {
+    border: 1px solid var(--box-color);
+    border-radius: 8px;
+    background-color: var(--box-background);
+    width: 360px;
+    margin:auto;
+    padding:  24px;
+    margin-top: 180px;
+    backdrop-filter: blur 4px;
+
+
+
+    /*
+    margin-right: auto;
+    margin-left: auto;
+    */
+
+
+}
+
+
+/* Links */
+ul {
+    list-style: none;
+    gap: 16px;
+    display:flex;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right: 10px;
+    
+    margin-top: 16px;
+
+}
+
+ul li a {
+    
+    display: flex;
+    justify-content: center;
+    padding: 16px 24px;
+    align-items: center;
+    background-color: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    border-radius: 8px;
+    backdrop-filter: blur 4px;
+    text-decoration: none;
+    font-weight: 500;
+    
+    transition: background 0.2s;
+
+    /* transition: all/elemento especifico / tempo; faz uma transição, torna mais interativo.
+
+    /* Display:block utilizado em line. padding é o preenchimento do elemento. Pode se utilizar nesse caso (height)
+    border-radius: px; arredonda o elemento
+    blackdrop-filter: blur px; adiciona efeito de embaçado.
+    text-decoration: none,underline; 
+    */
+}
+ul li a:hover {
+    background-color: var(--surface-color-hover);
+    border: 1.5px solid var(--text-color);
+}
+
+#links {
+    display: flex;
+    padding: 24px 0;
+    font-size: 24px;
+    justify-content: center;
+}
+
+#links a:hover {
+    background-color: var(--links-hover-color);
+ 
+}
+
+#links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    transition: background 0.2s;
+    border-radius: 50%;
+
+    
+    
+
+}
+
+footer {
+    text-align: center;
+    padding: 32px;
+}
+
+.Login {
+    padding: 8px 32px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    margin: 16px;
+    background-color: rgb(70, 175, 120, 0.4);
+    width: 120px;
+    border-radius: 500px;
+    position: absolute;
+    left: 1750px;
+    top: 10px;
+}
+
+.Login a {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+.Login a:hover {
+     background-color: rgba(255, 255, 255, 0.2);
+}
