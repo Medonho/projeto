@@ -6,12 +6,10 @@
 
 :root {
     --text-color: white;
-    --bg-url: url(./assets/Background.png);
+    --bg-url: url(./assets/Background.jpg);
     --stroke-color: rgba(255, 255, 255, 0.2);
     --surface-color: rgba(255, 255, 255, 0.1);
     --surface-color-hover: rgba(255, 255, 255, 0.2); 
-    --box-color: rgba(255, 255, 255, 0.3);   
-    --box-background: rgba(0, 0, 0, 0.2);
     --links-hover-color: rgba(255, 255, 255, 0.2);
     --switch-mode: url(./switch-icon.svg);
     --surface-span-color: rgba(255, 255, 255, 0.1);
@@ -25,8 +23,6 @@
     --surface-color: rgba(0, 0, 0, 0.2);
     --surface-color-hover: rgba(0, 0, 0, 0.5);
     --stroke-color: rgba(0, 0, 0, 0.05);
-    --box-color: rgba(0, 0, 0, 0.05);
-    --box-background: rgba(0, 0, 0, 0.3);
     --links-hover-color: rgba(0, 0, 0, 0.1);
     --switch-mode: url(./sun.svg);
     --surface-span-color: rgba(0, 0, 0, 0.1);
@@ -188,32 +184,9 @@ ul li a:hover {
 
 footer {
     text-align: center;
-    padding: 32px;
+    padding: 24px 0;
+    font-size: 14px;
 }
-
-.Login {
-    padding: 8px 32px;
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    margin: 16px;
-    background-color: rgb(70, 175, 120, 0.4);
-    width: 120px;
-    border-radius: 500px;
-    position: absolute;
-    left: 1750px;
-    top: 10px;
-}
-
-.Login a {
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    transition: background 0.2s;
-}
-
-.Login a:hover {
-     background-color: rgba(255, 255, 255, 0.2);
-}
-
 
 @media (min-width: 700px) {
     :root {
@@ -221,7 +194,7 @@ footer {
     }
 
     .light {
-        --bg-url: url(./assets/Background.jpg)
+        --bg-url: url(./assets/Backgrounddesktop-light.jpg)
     }
 }
 
